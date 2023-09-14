@@ -1,13 +1,9 @@
-const mongoose = require('mongoose')
-// const validator = require('validator')
-
-const Note = mongoose.model('Note',{
+const mongoose=require('mongoose')
+const notes=mongoose.model('notes',{
     description:{
-        type: String,
-        required: [true,"Why no task?"],
-        trim: true
+        type:String,
+        required:true
     }
 })
 
-module.exports = Note
-
+module.exports=notes

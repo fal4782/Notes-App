@@ -1,13 +1,16 @@
-const express = require("express")
-require('./db/connection.js')
-const noteRouter = require('./api/routes/router.js')
+const express=require('express')
+const app=express()
+require('./db/connection')
+const router=require('./api/routes/router')
 
-const app = express()
-const port = process.argv[2] || 3000
 
 app.use(express.json())
-app.use(noteRouter)
+app.use(router)
 
-app.listen(port,()=>{
-    console.log("Listening on port ",port);
+
+app.listen(3300,()=>{
+    console.log('listening on port 3300')
 })
+
+
+
