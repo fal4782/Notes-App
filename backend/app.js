@@ -1,8 +1,6 @@
 const express = require("express")
-const Note = require('./model/notes.js')
-// const mongoose = require('mongoose')
-require('./connection.js')
-const noteRouter = require('./routes/router.js')
+require('./db/connection.js')
+const noteRouter = require('./api/routes/router.js')
 
 const app = express()
 const port = process.argv[2] || 3000
@@ -10,7 +8,6 @@ const port = process.argv[2] || 3000
 app.use(express.json())
 app.use(noteRouter)
 
-app.listen(3000,()=>{
-    console.log("Listening on port 3000");
+app.listen(port,()=>{
+    console.log("Listening on port ",port);
 })
-
