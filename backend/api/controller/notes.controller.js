@@ -2,6 +2,7 @@ const notes=require('../services/notes.services')
 module.exports={
     addNotes:(req,res)=>{
        const data=req.body
+       console.log(data)
         notes.addNotesService(data,(err,result)=>{
             if(err){
                 return res.status(400).json({

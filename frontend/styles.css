@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    margin-top: 40px;
+}
+
+#note{
+    margin-bottom: 20px;
+}
+
+#response-msg{
+    margin-top: 30px;
+}
+
+.note-wrapper{
+    /* display: -webkit-box; */
+
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.note-wrapper p{
+    line-height: 2em;
+}
+.note-wrapper button{
+    margin-left: 10px;
+    padding:10px;
+}
