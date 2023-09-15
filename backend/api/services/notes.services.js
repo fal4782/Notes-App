@@ -4,7 +4,7 @@ module.exports={
         const note=new notes(data)
         console.log(data)
         note.save().then(()=>{
-            callback(null,'note added successfully')
+            callback(null,note)
         }).catch((e)=>{
             callback(e)
         }) 
